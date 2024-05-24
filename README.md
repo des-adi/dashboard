@@ -31,6 +31,17 @@ You may need to install react-router-dom, cors, express, pg and body-parser pack
 
 This application is a React-app with the data handling managed by a postgres database at the backend. The frontend framework is managed by react while expressjs and nodejs handle the api requests at the backend in server.js file.
 
+The postgres table "users" is created in the database "react-app" by running the following command
+
+create table users(
+	id SERIAL primary key,
+	username char(20) NOT NULL UNIQUE ,
+	dob DATE NOT NULL UNIQUE,
+	contact varchar(10) NOT NULL UNIQUE,
+	email varchar(30) NOT NULL UNIQUE,
+	description varchar(100) NOT NULL
+);
+
 
 
 
